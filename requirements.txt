@@ -1,0 +1,14 @@
+streamlit
+langchain
+langchain-community
+langchain-openai
+openai
+faiss-cpu
+pandas
+openpyxl
+python-dotenv
+sqlalchemy
+psycopg2-binary
+numpy
+
+
