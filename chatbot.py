@@ -10,7 +10,8 @@ from langchain.embeddings import OpenAIEmbeddings
 def load_chatbot(db_path="faiss_index"):
     # Load the saved vector DB
     embeddings = OpenAIEmbeddings()
-    vectorstore = FAISS.load_local(db_path, embeddings)
+    vectorstore = FAISS.load_local(db_path, embeddings, allow_dangerous_deserialization=True)
+
     
     # Make the retriever and chatbot
     retriever = vectorstore.as_retriever()
